@@ -2,10 +2,6 @@
 // Scrivi una funzione che accetti una stringa come argomento e la restituisca girata (es. "Ciao" -> "oaiC")
 
 
-const string = "Ciao";
-
-const turnedString = reverseString(string);
-
 function reverseString(string) {
     let resultString = "";
 
@@ -16,4 +12,10 @@ function reverseString(string) {
     return resultString;
 }
 
-console.log(turnedString);
+document.addEventListener ("click", function(){
+    const insertWord = document.getElementById("user-input").value;
+    
+    const wordTurn = reverseString(insertWord);
+
+    document.getElementById("result").textContent = wordTurn;
+})
