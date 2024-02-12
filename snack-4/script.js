@@ -1,13 +1,36 @@
 // Snack 4 (bonus):
 // Scrivi una funzione  che accetti una stringa come parametro e restituisca la stringa con i caratteri ordinati alfabeticamente
 // Es: riordina("webmaster") :freccia_destra: "abeemrstw"
-// Snack 5 (bonus):
-// Scrivi una funzione che accetti una stringa come parametro e restituisca la stessa stringa ma con le iniziali delle parole tutte in maiuscolo
-// Es: funzioneEsempio("nel mezzo del cammin di nostra vita")  :freccia_destra:  "Nel Mezzo Del Cammin Di Nostra Vita"
 
 
+function sortString(string){
+
+    
+    // convertiamo la stringa in un array di caratteri
+    
+    const characters = string.split("");
+    
+    // ordiniamo l'array di caratteri
+    characters.sort();   
+    
+
+    // restituiamo la stringa ordinata
+
+    return characters.join("");
+    
+}
+
+// const string = "webdevelop";
+
+// const sortedString = sortString(string);
+
+// console.log(sortedString);
 
 
+document.addEventListener("click", function(){
+    const string = document.getElementById("string").value;
 
+    const sortedString = sortString(string);
 
-
+    document.getElementById("result").textContent = sortedString;
+})
