@@ -21,5 +21,5 @@ function mergedArrays(firstArray, secondArray) {
     return toggleArrays;
 }
 
-
-console.log(toggleArrays);
+document.getElementById("result").textContent = toggleArrays;
+// console.log(toggleArrays);
