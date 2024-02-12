@@ -36,4 +36,28 @@ function cutArray (array, positionMin, positionMax){
     return trimmedArray;
 }
 
-console.log(trimmedArray);
+// console.log(trimmedArray);
+
+document.addEventListener("click", function () {
+
+
+    // recuperiamo dall'utente l'array e le posizioni
+    const arrayString = document.getElementById("array").value;
+
+    const posMinString = document.getElementById("positionMin").value;
+
+    const posMaxString = document.getElementById("positionMax").value;
+
+    //convertiamo le stringhe in array e numeri
+
+const array = arrayString.split(",").map(Number);
+const positionMin = parseInt(posMinString);
+const positionMax = parseInt(posMaxString);
+
+//taglio array
+const trimmedArray = cutArray(array, positionMin, positionMax);
+
+document.getElementById("result").innerHTML = "Il tuo array tagliato è " + trimmedArray;
+
+
+})
