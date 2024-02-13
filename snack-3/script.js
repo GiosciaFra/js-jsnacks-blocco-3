@@ -23,13 +23,13 @@ function cutArray (array, positionMin, positionMax){
         alert ("la posizione minima dev'essere minore o uguale alla posizione massima");
     }
 
-    //creao un nuovo array vuoto
+    //creo un nuovo array vuoto
 
     const trimmedArray = [];
 
 
     // con il for aggiungo all'array tagliato i valori tra positionMin e PositionMax
-    for (let i= positionMin; i <= positionMax; i++) {
+    for (let i = positionMin; i <= positionMax; i++) {
         trimmedArray.push(array[i]);
     }
 
@@ -39,25 +39,25 @@ function cutArray (array, positionMin, positionMax){
 // console.log(trimmedArray);
 
 document.addEventListener("click", function () {
-
-
+    
+    
     // recuperiamo dall'utente l'array e le posizioni
     const arrayString = document.getElementById("array").value;
-
+    
     const posMinString = document.getElementById("positionMin").value;
-
+    
     const posMaxString = document.getElementById("positionMax").value;
-
+    
     //convertiamo le stringhe in array e numeri
-
-const array = arrayString.split(",").map(Number);
-const positionMin = parseInt(posMinString);
-const positionMax = parseInt(posMaxString);
-
-//taglio array
-const trimmedArray = cutArray(array, positionMin, positionMax);
-
-document.getElementById("result").innerHTML = "Il tuo array tagliato è " + trimmedArray;
-
-
+    
+    const array = arrayString.split(",").map(Number);
+    const positionMin = parseInt(posMinString);
+    const positionMax = parseInt(posMaxString);
+    
+    //taglio array
+    const trimmedArray = cutArray(array, positionMin, positionMax);
+    
+    
+    
+    document.getElementById("result").innerHTML = "Il tuo array tagliato è " + trimmedArray;
 })
